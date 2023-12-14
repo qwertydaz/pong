@@ -1,5 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://cew62xtlqwmom"]
+[gd_scene load_steps=10 format=3 uid="uid://cew62xtlqwmom"]
 
+[ext_resource type="Script" path="res://Player.cs" id="1_gau6n"]
 [ext_resource type="Texture2D" uid="uid://bftyfkix677r1" path="res://art/player_up0.png" id="1_lb264"]
 [ext_resource type="Texture2D" uid="uid://d1as06n6eijft" path="res://art/player_up4.png" id="2_ebgvb"]
 [ext_resource type="Texture2D" uid="uid://c00u0ko5n117q" path="res://art/player_up1.png" id="3_o5fw2"]
@@ -44,13 +45,14 @@ animations = [{
 
 [node name="Player" type="Area2D"]
 position = Vector2(62, 59)
+script = ExtResource("1_gau6n")
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.25, 0.25)
 sprite_frames = SubResource("SpriteFrames_5nckk")
 animation = &"walk"
-frame_progress = 0.675
+frame_progress = 0.490225
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 position = Vector2(-1.11365, 1.5)
