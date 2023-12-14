@@ -43,11 +43,16 @@ animations = [{
 }]
 
 [node name="Player" type="Area2D"]
-position = Vector2(113, 125)
+position = Vector2(62, 59)
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.25, 0.25)
 sprite_frames = SubResource("SpriteFrames_5nckk")
 animation = &"walk"
-frame_progress = 0.865998
+frame_progress = 0.675
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(-1.11365, 1.5)
+scale = Vector2(0.977273, 0.99375)
+polygon = PackedVector2Array(4.20931, -50.8176, 57.4186, 11.5723, 51.2791, 48.805, -46.9535, 45.7862, -60, 5, -20, -50)
