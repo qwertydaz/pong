@@ -52,7 +52,7 @@ metadata/_edit_group_ = true
 scale = Vector2(0.25, 0.25)
 sprite_frames = SubResource("SpriteFrames_5nckk")
 animation = &"walk"
-frame_progress = 0.490225
+frame_progress = 0.154181
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 position = Vector2(-1.11365, 1.5)
