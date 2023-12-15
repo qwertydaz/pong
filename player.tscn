@@ -13,16 +13,16 @@
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_lb264")
+"texture": ExtResource("3_o5fw2")
+}, {
+"duration": 0.5,
+"texture": ExtResource("4_ra3qf")
 }, {
 "duration": 2.0,
 "texture": ExtResource("2_ebgvb")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_o5fw2")
-}, {
-"duration": 0.5,
-"texture": ExtResource("4_ra3qf")
+"texture": ExtResource("1_lb264")
 }],
 "loop": true,
 "name": &"up",
@@ -30,13 +30,13 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_5k6xn")
-}, {
-"duration": 1.0,
 "texture": ExtResource("6_871a1")
 }, {
 "duration": 1.0,
 "texture": ExtResource("7_4m5bh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_5k6xn")
 }],
 "loop": true,
 "name": &"walk",
@@ -52,7 +52,7 @@ metadata/_edit_group_ = true
 scale = Vector2(0.25, 0.25)
 sprite_frames = SubResource("SpriteFrames_5nckk")
 animation = &"walk"
-frame_progress = 0.154181
+frame_progress = 0.470114
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 position = Vector2(-1.11365, 1.5)

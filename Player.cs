@@ -45,6 +45,24 @@ namespace Pong
 			{
 				animatedSprite2D.Stop();
 			}
+
+			Position += velocity * (float)delta;
+			Position = new Vector2(
+				x: Mathf.Clamp(Position.X, 0, _screenSize.X),
+				y: Mathf.Clamp(Position.Y, 0, _screenSize.Y)
+			);
+
+			if (velocity.X != 0)
+			{
+				animatedSprite2D.Animation = "walk";
+				animatedSprite2D.FlipV = false;
+				// See the note below about boolean assignment.
+				animatedSprite2D.FlipH = velocity.X < 0;
+			}
+			else if (velocity.Y != 0)
+			{
+				animatedSprite2D.Animation = "up";
+			}
 		}
 
 		[Export]
