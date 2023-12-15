@@ -1,5 +1,4 @@
 using Godot;
-using System;
 
 namespace Pong
 {
@@ -7,12 +6,20 @@ namespace Pong
 	{
 		public override void _Ready()
 		{
+			var animatedSprite2D = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
 			_screenSize = GetViewportRect().Size;
+			animatedSprite2D.Visible = false;
 		}
 
 		public override void _Process(double delta)
 		{
 			var velocity = Vector2.Zero; // The player's movement vector.
+			var animatedSprite2D = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
+
+			if (Input.IsActionJustPressed("space"))
+			{
+				animatedSprite2D.Visible = !animatedSprite2D.Visible;
+			}
 
 			if (Input.IsActionPressed("move_right"))
 			{
@@ -33,8 +40,6 @@ namespace Pong
 			{
 				velocity.Y -= 1;
 			}
-
-			var animatedSprite2D = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
 
 			if (velocity.Length() > 0)
 			{
